@@ -1,0 +1,53 @@
+/* Variáveis CSS para cores personalizadas */
+:root {
+    --sennun-primary: #AE5E45;
+    --sennun-primary-dark: #8C4B3B; /* Um tom um pouco mais escuro para hover */
+}
+
+/* Customizando classes Tailwind com as variáveis */
+.text-sennun-primary {
+    color: var(--sennun-primary);
+}
+
+.bg-sennun-primary {
+    background-color: var(--sennun-primary);
+}
+
+.hover\:bg-sennun-primary-dark:hover {
+    background-color: var(--sennun-primary-dark);
+}
+
+/* Estilos para rolagem suave (smooth scroll) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Esconder elementos de animação por padrão */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays para animações */
+.reveal-item.delay-100 { transition-delay: 0.1s; }
+.reveal-item.delay-200 { transition-delay: 0.2s; }
+.reveal-item.delay-300 { transition-delay: 0.3s; }
+
+/* Tipos de animação */
+.fade-in-up {
+    transform: translateY(20px);
+}
+
+.fade-in-left {
+    transform: translateX(-20px);
+}
+
+.fade-in-right {
+    transform: translateX(20px);
+}
